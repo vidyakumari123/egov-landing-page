@@ -21,18 +21,18 @@ function Navbar() {
         {/* MENU */}
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav mx-auto">
-            <li className="nav-item"><a className="nav-link" href="#">About Us</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Areas of Work</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Products & Solutions</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Our Platform</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Ecosystem</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Resources</a></li>
+            <li className="nav-item"><a className="nav-link" href="/about">About Us</a></li>
+            <li className="nav-item"><a className="nav-link" href="/areas">Areas of Work</a></li>
+            <li className="nav-item"><a className="nav-link" href="/products">Products & Solutions</a></li>
+            <li className="nav-item"><a className="nav-link" href="/platform">Our Platform</a></li>
+            <li className="nav-item"><a className="nav-link" href="/ecosystem">Ecosystem</a></li>
+            <li className="nav-item"><a className="nav-link" href="/resources">Resources</a></li>
           </ul>
 
           <div className="d-flex gap-3">
-            <a className="nav-link" href="#">Events</a>
-            <a className="nav-link" href="#">Contact</a>
-            <a className="nav-link fw-bold" href="#">ENG</a>
+            <a className="nav-link" href="/events">Events</a>
+            <a className="nav-link" href="/contact">Contact</a>
+            <a className="nav-link fw-bold" href="/">ENG</a>
           </div>
         </div>
 
