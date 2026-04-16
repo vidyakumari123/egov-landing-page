@@ -22,7 +22,7 @@ function Hero() {
             </div>
           </div>
 
-          {/* RIGHT IMAGE (EMPTY because using background) */}
+       
           <div className="col-md-6"></div>
 
         </div>

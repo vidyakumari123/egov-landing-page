@@ -1,8 +1,6 @@
-import React from "react";
-
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-white shadow-sm py-3">
+    <nav className="navbar navbar-expand-lg bg-white shadow-sm">
       <div className="container">
 
         {/* LOGO */}
@@ -10,49 +8,34 @@ function Navbar() {
           eGov
         </a>
 
-        {/* MOBILE BUTTON */}
+        {/* TOGGLE BUTTON */}
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          data-bs-target="#navbarContent"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* NAV LINKS */}
-        <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
-
-          {/* CENTER MENU */}
-          <ul className="navbar-nav mx-auto gap-3">
-            <li className="nav-item">
-              <a className="nav-link" href="/">About Us</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">Areas of Work</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">Products & Solutions</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">Our Platform</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">Ecosystem</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">Resources</a>
-            </li>
+        {/* MENU */}
+        <div className="collapse navbar-collapse" id="navbarContent">
+          <ul className="navbar-nav mx-auto">
+            <li className="nav-item"><a className="nav-link" href="#">About Us</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Areas of Work</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Products & Solutions</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Our Platform</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Ecosystem</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Resources</a></li>
           </ul>
 
-          {/* RIGHT SIDE */}
-          <div className="d-flex align-items-center gap-3">
-            <a href="/" className="nav-link">Events</a>
-            <a href="/" className="nav-link">Contact</a>
-            <span className="fw-semibold">ENG</span>
+          <div className="d-flex gap-3">
+            <a className="nav-link" href="#">Events</a>
+            <a className="nav-link" href="#">Contact</a>
+            <a className="nav-link fw-bold" href="#">ENG</a>
           </div>
-
         </div>
+
       </div>
     </nav>
   );

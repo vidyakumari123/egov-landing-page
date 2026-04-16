@@ -6,7 +6,7 @@ function Products() {
   const [category, setCategory] = useState("all");
   const [loading, setLoading] = useState(true);
 
-  // ✅ Loading simulation
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -19,7 +19,7 @@ function Products() {
       (category === "all" || item.category === category)
   );
 
-  // ✅ Show loading first
+  
   if (loading) {
     return (
       <section className="section container text-center">
