@@ -1,15 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import productsData from "../../data/products";
 
 function Products() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
+  const [loading, setLoading] = useState(true);
+
+  // ✅ Loading simulation
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   const filtered = productsData.filter(
     (item) =>
       item.name.toLowerCase().includes(search.toLowerCase()) &&
       (category === "all" || item.category === category)
   );
+
+  // ✅ Show loading first
+  if (loading) {
+    return (
+      <section className="section container text-center">
+        <h2>Latest at eGov</h2>
+        <p>Loading products...</p>
+      </section>
+    );
+  }
 
   return (
     <section className="section container">
@@ -37,7 +55,10 @@ function Products() {
             <div className="col-md-4 mb-4" key={item.id}>
               <div className="card custom-card p-3 shadow-sm">
                 <img
-                  src={item.image || "https://via.placeholder.com/300x200?text=No+Image"}
+                  src={
+                    item.image ||
+                    "https://via.placeholder.com/300x200?text=No+Image"
+                  }
                   alt={item.name}
                   className="card-img-top"
                 />
